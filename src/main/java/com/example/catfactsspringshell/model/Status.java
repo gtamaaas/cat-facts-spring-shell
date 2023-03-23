@@ -1,4 +1,4 @@
-package com.example.catfactsspringshell;
+package com.example.catfactsspringshell.model;
 
 public class Status {
     private Boolean verified;

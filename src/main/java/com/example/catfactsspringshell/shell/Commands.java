@@ -1,12 +1,11 @@
-package com.example.catfactsspringshell;
+package com.example.catfactsspringshell.shell;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
+import com.example.catfactsspringshell.CatFactClient;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 
 @ShellComponent
-public class HelloCommand {
+public class Commands {
 
     @ShellMethod(value="Gives a random verified cat fact")
     public String cat() {

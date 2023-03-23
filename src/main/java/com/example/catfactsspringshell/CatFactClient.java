@@ -1,5 +1,6 @@
 package com.example.catfactsspringshell;
 
+import com.example.catfactsspringshell.model.CatFact;
 import org.springframework.web.client.RestTemplate;
 
 public class CatFactClient {

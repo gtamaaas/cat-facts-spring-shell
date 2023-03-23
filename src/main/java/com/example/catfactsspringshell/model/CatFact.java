@@ -1,4 +1,4 @@
-package com.example.catfactsspringshell;
+package com.example.catfactsspringshell.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CatFact {
     private String text;
-
-    private String _id;
+    @JsonProperty("_id")
+    private String id;
 
     // annotation needed, doesn't work without it
     @JsonProperty("status")
@@ -22,12 +22,12 @@ public class CatFact {
         this.text = text;
     }
 
-    public String get_id() {
-        return _id;
+    public String getId() {
+        return id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setId(String id) {
+        this.id = id;
     }
 
 
@@ -41,6 +41,6 @@ public class CatFact {
 
     @Override
     public String toString() {
-        return text + _id + status.getVerified();
+        return text + id + status.getVerified();
     }
 }
