@@ -16,8 +16,8 @@ public class Commands {
     @Autowired
     CatFactClient catFactClient;
 
-    @ShellMethod(value="Gives a random verified cat fact")
-    public String cat() {
+    @ShellMethod(key = "catfact", value="Gives a random verified cat fact")
+    public String getCatFact() {
         return catFactClient.getRandomFact(restTemplate);
     }
 }

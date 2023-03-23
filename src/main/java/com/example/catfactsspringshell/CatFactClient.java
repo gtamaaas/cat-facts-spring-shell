@@ -20,7 +20,7 @@ public class CatFactClient {
         while(catFact.getStatus().getVerified() == null) {
             catFact = restTemplate.getForObject(resourceUrl, CatFact.class);
         }
-        return catFact.toString();
+        return catFact.getText();
     }
 
 
